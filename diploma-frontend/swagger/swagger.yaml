@@ -32,8 +32,6 @@ paths:
       responses:
         '200':
           description: successful operation
-        '500':
-          description: unsuccessful operation
 
 
   /sign-up:
@@ -63,8 +61,6 @@ paths:
       responses:
         '200':
           description: successful operation
-        '500':
-          description: unsuccessful operation
 
   /sign-out:
     post:
@@ -498,12 +494,9 @@ paths:
               xml:
                 name: password
               properties:
-                currentPassword:
+                password:
                   type: string
-                  example: 'oldPass123'
-                newPassword:
-                  type: string
-                  example: 'newPass321'
+                  example: 'QWEWETEW12312'
       responses:
         '200':
           description: successful operation
@@ -512,10 +505,14 @@ paths:
     post:
       tags:
         - profile
-      description: 'update user avatar (request.FILES["avatar"] in Django)'
+      description: 'update user avatar'
       responses:
         '200':
           description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Image'
 
   /tags:
     get:
@@ -663,10 +660,10 @@ components:
           example: 200.67
         dateFrom:
           type: string
-          example: '05-08'
+          example: '2023-05-08'
         dateTo:
           type: string
-          example: '05-20'
+          example: '2023-05-20'
         title:
           type: string
           example: 'video card'
@@ -675,7 +672,9 @@ components:
           xml:
             wrapped: true
           items:
-            $ref: '#/components/schemas/Image'
+            type: string
+            xml:
+              name: imageUrl
     ProductFull:
       required:
         - id
@@ -719,7 +718,9 @@ components:
           xml:
             wrapped: true
           items:
-            $ref: '#/components/schemas/Image'
+            type: string
+            xml:
+              name: imageUrl
         tags:
           type: array
           xml:

@@ -1,0 +1,26 @@
+from rest_framework import serializers
+
+from .models import Avatar, Profile
+
+
+class AvatarSerializer(serializers.ModelSerializer):
+    src = serializers.SerializerMethodField(source='src.url', read_only=True)
+
+    class Meta:
+        model = Avatar
+        fields = ["src", "alt"]
+        extra_kwargs = {
+            'alt': {'required': False, 'allow_blank': True}
+        }
+
+    def get_src(self, obj):
+        return obj.src.url
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    avatar = AvatarSerializer(read_only=True)
+    fullName = serializers.CharField(source='full_name', max_length=128)
+
+    class Meta:
+        model = Profile
+        fields = ["fullName", "email", "phone", "avatar"]
