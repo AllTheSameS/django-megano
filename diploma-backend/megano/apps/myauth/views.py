@@ -8,7 +8,7 @@ from rest_framework import status, permissions
 from rest_framework.parsers import MultiPartParser
 
 from .models import Profile, Avatar
-from .serializer import ProfileSerializer
+from .serializer import ProfileSerializer, AvatarUpdateSerializer
 from .utils.delete_avatar import delete_avatar
 
 import json
@@ -37,14 +37,15 @@ class SignUpView(APIView):
 
         try:
             user = User.objects.create_user(username=username, password=password)
-            avatar = Avatar.objects.create()
-            Profile.objects.create(user=user, avatar=avatar, full_name=name)
+            profile = Profile.objects.create(user=user, full_name=name)
+            Avatar.objects.create(profile=profile)
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
 
             return Response(status=status.HTTP_201_CREATED)
-        except Exception:
+        except Exception as ex:
+            print(ex)
             return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
@@ -108,15 +109,16 @@ class ProfileUpdateAvatar(APIView):
 
     def post(self, request):
         try:
-            avatar = request.FILES["avatar"]
-            avatar.name = uuid.uuid4().hex + avatar.name
             profile = request.user.profile
-            avatar = Avatar.objects.create(src=avatar)
-            if profile.avatar.src != 'avatars/default.jpg':
-                delete_avatar(str(profile.avatar.src))
-            profile.avatar.delete()
-            profile.avatar = avatar
-            profile.save()
+            avatar_file = request.FILES["avatar"]
+            avatar_file.name = uuid.uuid4().hex + avatar_file.name
+            serializer = AvatarUpdateSerializer(
+                profile.avatar,
+                data={'src': avatar_file},
+                partial=True,
+                )
+            if serializer.is_valid():
+                serializer.save()
             return Response(
                 status=status.HTTP_200_OK
             )

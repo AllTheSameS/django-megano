@@ -1,20 +1,37 @@
 from rest_framework import serializers
+from megano.settings import DEFAULT_AVATAR_PATH
 
 from .models import Avatar, Profile
 
 
-class AvatarSerializer(serializers.ModelSerializer):
-    src = serializers.SerializerMethodField(source='src.url', read_only=True)
+class AvatarUpdateSerializer(serializers.ModelSerializer):
+    src = serializers.ImageField(write_only=True)
 
     class Meta:
         model = Avatar
         fields = ["src", "alt"]
         extra_kwargs = {
-            'alt': {'required': False, 'allow_blank': True}
+            'alt': {'required': False}
         }
 
-    def get_src(self, obj):
-        return obj.src.url
+    def update(self, instance, validated_data):
+        avatar_file = validated_data.pop('src', None)
+        if avatar_file:
+            if instance.src and instance.src != DEFAULT_AVATAR_PATH:
+                instance.src.delete(save=False)
+            instance.src = avatar_file
+        return super().update(instance, validated_data)
+
+
+class AvatarSerializer(serializers.ModelSerializer):
+    src = serializers.ImageField(read_only=True)
+
+    class Meta:
+        model = Avatar
+        fields = ["src", "alt"]
+        extra_kwargs = {
+            'alt': {'required': False}
+        }
 
 
 class ProfileSerializer(serializers.ModelSerializer):

@@ -9986,3 +9986,2189 @@ Watching for file changes with StatReloader
 C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 17415
+Forbidden: /api/profile
+"GET /api/profile HTTP/1.1" 403 58
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /sign-in/ HTTP/1.1" 200 12766
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /sign-up/ HTTP/1.1" 200 12882
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"POST /api/sign-up HTTP/1.1" 201 0
+"GET / HTTP/1.1" 200 19884
+Not Found: /api/products/limited
+Not Found: /api/banners
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /api/banners HTTP/1.1" 404 8149
+Not Found: /api/products/popular
+Not Found: /api/categories
+"GET /api/products/popular HTTP/1.1" 404 8176
+"GET /api/categories HTTP/1.1" 404 8158
+Not Found: /api/basket
+Not Found: /api/products/limited
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /profile/ HTTP/1.1" 200 17612
+"GET /api/profile HTTP/1.1" 200 96
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /media/avatars/default.jpg HTTP/1.1" 304 0
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 133
+"GET /media/avatars/3d4a333a486b4dde95424f3c321dddeaScreenshot_1.png HTTP/1.1" 200 75572
+"POST /api/profile HTTP/1.1" 200 155
+"GET /profile/ HTTP/1.1" 200 17612
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/profile HTTP/1.1" 200 155
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /media/avatars/3d4a333a486b4dde95424f3c321dddeaScreenshot_1.png HTTP/1.1" 304 0
+"POST /api/profile HTTP/1.1" 200 156
+"GET /profile/ HTTP/1.1" 200 17612
+"GET /api/profile HTTP/1.1" 200 156
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /media/avatars/3d4a333a486b4dde95424f3c321dddeaScreenshot_1.png HTTP/1.1" 304 0
+"POST /api/profile/password HTTP/1.1" 200 56
+Internal Server Error: /api/sign-out
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\response.py", line 59, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+           ^^^^^^^^
+AssertionError: .accepted_renderer not set on Response
+"POST /api/sign-out HTTP/1.1" 500 73112
+"GET / HTTP/1.1" 200 19684
+Not Found: /api/products/limited
+"GET /api/products/limited HTTP/1.1" 404 8176
+Not Found: /api/basket
+Not Found: /api/banners
+Not Found: /api/categories
+Not Found: /api/products/popular
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/banners HTTP/1.1" 404 8149
+Not Found: /api/products/limited
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/products/popular HTTP/1.1" 404 8176
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /sign-in/ HTTP/1.1" 200 12766
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+Internal Server Error: /api/sign-in
+"POST /api/sign-in HTTP/1.1" 500 0
+"POST /api/sign-in HTTP/1.1" 201 0
+"GET / HTTP/1.1" 200 19884
+Not Found: /api/products/limited
+Not Found: /api/products/popular
+Not Found: /api/banners
+Not Found: /api/basket
+Not Found: /api/categories
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /api/products/popular HTTP/1.1" 404 8176
+"GET /api/banners HTTP/1.1" 404 8149
+"GET /api/basket HTTP/1.1" 404 8146
+Not Found: /api/products/limited
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/products/limited HTTP/1.1" 404 8176
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 19684
+Not Found: /api/products/limited
+"GET /api/products/limited HTTP/1.1" 404 8176
+Not Found: /api/banners
+Not Found: /api/categories
+Not Found: /api/products/limited
+"GET /api/banners HTTP/1.1" 404 8149
+Not Found: /api/products/popular
+"GET /api/categories HTTP/1.1" 404 8158
+Not Found: /api/basket
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /api/products/popular HTTP/1.1" 404 8176
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /catalog HTTP/1.1" 301 0
+"GET /catalog/ HTTP/1.1" 200 19740
+"GET /static/frontend/assets/js/catalog.js HTTP/1.1" 200 3543
+"GET /static/frontend/assets/img/icons/nextPagination.svg HTTP/1.1" 200 163
+"GET /static/frontend/assets/img/icons/prevPagination.svg HTTP/1.1" 200 167
+Not Found: /api/tags
+Not Found: /api/basket
+Not Found: /api/categories
+Not Found: /api/catalog
+"GET /api/tags HTTP/1.1" 404 8140
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/catalog?filter[name]=&filter[minPrice]=0&filter[maxPrice]=50000&filter[freeDelivery]=false&filter[available]=true&currentPage=1&sort=price&sortType=inc&limit=20 HTTP/1.1" 404 8334
+"GET /static/frontend/assets/img/icons/upArrow.svg HTTP/1.1" 200 233
+"GET /static/frontend/assets/fonts/Roboto/Roboto-Italic.woff HTTP/1.1" 200 31392
+"GET / HTTP/1.1" 200 19684
+Not Found: /api/products/limited
+"GET /api/products/limited HTTP/1.1" 404 8176
+Not Found: /api/products/popular
+Not Found: /api/banners
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/products/popular HTTP/1.1" 404 8176
+"GET /api/banners HTTP/1.1" 404 8149
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+Not Found: /api/products/limited
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET / HTTP/1.1" 200 19684
+Not Found: /api/products/limited
+"GET /api/products/limited HTTP/1.1" 404 8176
+Not Found: /api/banners
+Not Found: /api/categories
+Not Found: /api/products/popular
+Not Found: /api/basket
+"GET /api/banners HTTP/1.1" 404 8149
+Not Found: /api/products/limited
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/products/popular HTTP/1.1" 404 8176
+"GET /api/products/limited HTTP/1.1" 404 8176
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6818
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6818
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\admin.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\admin.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\admin.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\admin.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\admin.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 19684
+"GET /static/frontend/assets/css/basic.css HTTP/1.1" 304 0
+"GET /static/frontend/assets/css/fonts.css HTTP/1.1" 304 0
+"GET /static/frontend/assets/css/extra.css HTTP/1.1" 304 0
+"GET /static/frontend/assets/plg/CountDown/countdown.js HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/socialHeader/fb.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/socialHeader/tw.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/socialHeader/in.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/socialHeader/pt.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/socialHeader/mail.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/js/index.js HTTP/1.1" 304 0
+"GET /static/frontend/assets/js/app.js HTTP/1.1" 304 0
+"GET /static/frontend/assets/plg/jQuery/jquery-3.5.0.slim.min.js HTTP/1.1" 304 0
+"GET /static/frontend/assets/plg/form/jquery.form.js HTTP/1.1" 304 0
+"GET /static/frontend/assets/plg/form/jquery.maskedinput.min.js HTTP/1.1" 304 0
+"GET /static/frontend/assets/plg/range/ion.rangeSlider.min.js HTTP/1.1" 304 0
+"GET /static/frontend/assets/plg/Slider/slick.min.js HTTP/1.1" 304 0
+"GET /static/frontend/assets/js/scripts.js HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/logo.png HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/cart.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/allDep.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/search.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/card/cart.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/advantages/shipping.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/advantages/moneyBack.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/advantages/support.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/advantages/quality.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/logo_footer.png HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/socialFooter/fb.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/socialFooter/tw.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/socialFooter/in.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/socialFooter/pt.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/icons/socialFooter/mail.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/payments/visa.png HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/payments/mastercard.png HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/payments/paypal.png HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/payments/american.png HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/payments/electron.png HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/payments/maestro.png HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/payments/delta.png HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/payments/e.png HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/payments/dk.png HTTP/1.1" 304 0
+Not Found: /api/banners
+Not Found: /api/products/popular
+Not Found: /api/products/limited
+Not Found: /api/basket
+Not Found: /api/categories
+"GET /api/banners HTTP/1.1" 404 8149
+"GET /api/products/popular HTTP/1.1" 404 8176
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/categories HTTP/1.1" 404 8158
+Not Found: /api/products/limited
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /static/frontend/assets/img/icons/arrowSlide.svg HTTP/1.1" 304 0
+"GET /static/frontend/assets/img/bg/lineHeaderSection.png HTTP/1.1" 304 0
+"GET /static/frontend/assets/fonts/Roboto/Roboto-Regular.woff HTTP/1.1" 304 0
+"GET /static/frontend/assets/fonts/Roboto/Roboto-Medium.woff HTTP/1.1" 304 0
+"GET /static/frontend/assets/fonts/Roboto/Roboto-Bold.woff HTTP/1.1" 304 0
+"GET /static/frontend/assets/fonts/Roboto/Roboto-Black.woff HTTP/1.1" 304 0
+"GET /sign-in/ HTTP/1.1" 200 12766
+"GET /static/frontend/assets/js/signIn.js HTTP/1.1" 304 0
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /sign-up/ HTTP/1.1" 200 12882
+"GET /static/frontend/assets/js/signUp.js HTTP/1.1" 304 0
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+Internal Server Error: /api/sign-up
+"POST /api/sign-up HTTP/1.1" 500 0
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/sign-up
+"POST /api/sign-up HTTP/1.1" 500 0
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/sign-up
+"POST /api/sign-up HTTP/1.1" 500 0
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/sign-up
+"POST /api/sign-up HTTP/1.1" 500 0
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/sign-up
+"POST /api/sign-up HTTP/1.1" 500 0
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/sign-up
+"POST /api/sign-up HTTP/1.1" 500 0
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/sign-up
+"POST /api/sign-up HTTP/1.1" 500 0
+"POST /api/sign-up HTTP/1.1" 201 0
+"GET / HTTP/1.1" 200 19885
+Not Found: /api/products/limited
+"GET /api/products/limited HTTP/1.1" 404 8176
+Not Found: /api/banners
+Not Found: /api/products/popular
+Not Found: /api/categories
+"GET /api/banners HTTP/1.1" 404 8149
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/products/popular HTTP/1.1" 404 8176
+Not Found: /api/basket
+Not Found: /api/products/limited
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/products/limited HTTP/1.1" 404 8176
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 17613
+"GET /static/frontend/assets/js/profile.js HTTP/1.1" 304 0
+"GET /api/profile HTTP/1.1" 200 61
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /profile/ HTTP/1.1" 200 17613
+"GET /api/profile HTTP/1.1" 200 61
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /static/frontend/favicon.ico HTTP/1.1" 304 0
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 17613
+Not Found: /api/basket
+Not Found: /api/categories
+"GET /api/profile HTTP/1.1" 200 61
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/categories HTTP/1.1" 404 8158
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 17613
+"GET /api/profile HTTP/1.1" 200 55
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /profile/ HTTP/1.1" 200 17613
+Not Found: /api/basket
+Not Found: /api/categories
+"GET /api/profile HTTP/1.1" 200 55
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /profile/ HTTP/1.1" 200 17613
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/profile HTTP/1.1" 200 55
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 69, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 553, in run_validators
+    validator(value)
+TypeError: phone_validator() takes 0 positional arguments but 1 was given
+"POST /api/profile HTTP/1.1" 500 128345
+"GET /profile/ HTTP/1.1" 200 17613
+"GET /api/profile HTTP/1.1" 200 55
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/categories HTTP/1.1" 404 8158
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 17613
+"GET /api/profile HTTP/1.1" 200 61
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 17613
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/profile HTTP/1.1" 200 96
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /media/avatars/default.jpg HTTP/1.1" 304 0
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 68, in post
+    print(serializer)
+          ^^
+NameError: name 'se' is not defined
+"POST /api/profile HTTP/1.1" 500 97934
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 67, in post
+    print(profile)
+          ^^
+NameError: name 'pr' is not defined
+"POST /api/profile HTTP/1.1" 500 96832
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 71, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 553, in run_validators
+    validator(value)
+TypeError: phone_validator() takes 0 positional arguments but 1 was given
+"POST /api/profile HTTP/1.1" 500 129364
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 71, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 553, in run_validators
+    validator(value)
+TypeError: phone_validator() takes 0 positional arguments but 1 was given
+"POST /api/profile HTTP/1.1" 500 129364
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 71, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 553, in run_validators
+    validator(value)
+TypeError: phone_validator() takes 0 positional arguments but 1 was given
+"POST /api/profile HTTP/1.1" 500 129364
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 71, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 553, in run_validators
+    validator(value)
+TypeError: phone_validator() takes 0 positional arguments but 1 was given
+"POST /api/profile HTTP/1.1" 500 129364
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 71, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 553, in run_validators
+    validator(value)
+TypeError: phone_validator() takes 0 positional arguments but 1 was given
+"POST /api/profile HTTP/1.1" 500 129364
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 71, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 553, in run_validators
+    validator(value)
+TypeError: phone_validator() takes 0 positional arguments but 1 was given
+"POST /api/profile HTTP/1.1" 500 129331
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 71, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 553, in run_validators
+    validator(value)
+TypeError: phone_validator() takes 0 positional arguments but 1 was given
+"POST /api/profile HTTP/1.1" 500 129331
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 71, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 553, in run_validators
+    validator(value)
+TypeError: phone_validator() takes 0 positional arguments but 1 was given
+"POST /api/profile HTTP/1.1" 500 129331
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 71, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 553, in run_validators
+    validator(value)
+TypeError: phone_validator() takes 0 positional arguments but 1 was given
+"POST /api/profile HTTP/1.1" 500 129310
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 71, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 553, in run_validators
+    validator(value)
+TypeError: phone_validator() takes 0 positional arguments but 1 was given
+"POST /api/profile HTTP/1.1" 500 129310
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 71, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 553, in run_validators
+    validator(value)
+TypeError: phone_validator() takes 0 positional arguments but 1 was given
+"POST /api/profile HTTP/1.1" 500 129342
+Watching for file changes with StatReloader
+"POST /api/profile HTTP/1.1" 200 117
+"GET /profile/ HTTP/1.1" 200 17613
+"GET /api/profile HTTP/1.1" 200 117
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 70, in post
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    for field in fields:
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'data' was declared on serializer AvatarSerializer, but has not been included in the 'fields' option.
+"POST /api/profile HTTP/1.1" 500 141100
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 17613
+"GET /api/profile HTTP/1.1" 200 117
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 17613
+"GET /api/profile HTTP/1.1" 200 117
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 17613
+"GET /api/profile HTTP/1.1" 200 117
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/categories HTTP/1.1" 404 8158
+Internal Server Error: /api/profile/avatar
+"POST /api/profile/avatar HTTP/1.1" 500 82
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 17613
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 63, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\fields.py", line 1869, in to_representation
+    method = getattr(self.parent, self.method_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AvatarSerializer' object has no attribute 'get_url'. Did you mean: 'get_src'?
+"GET /api/profile HTTP/1.1" 500 122519
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 17613
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+Internal Server Error: /api/profile
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py", line 63, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\relations.py", line 373, in to_representation
+    assert 'request' in self.context, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `HyperlinkedIdentityField` requires the request in the serializer context. Add `context={'request': request}` when instantiating the serializer.
+"GET /api/profile HTTP/1.1" 500 123304
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 17613
+"GET /api/profile HTTP/1.1" 200 82
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/categories HTTP/1.1" 404 8158
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 17613
+"GET /api/profile HTTP/1.1" 200 117
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 117
+"POST /api/profile HTTP/1.1" 200 117
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 155
+"GET /media/avatars/51dae63ef9ac4d939e6d1836481091f8Screenshot_16.png HTTP/1.1" 200 126850
+"POST /api/profile HTTP/1.1" 200 155
+"GET /profile/ HTTP/1.1" 200 17613
+"GET /api/profile HTTP/1.1" 200 155
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /media/avatars/51dae63ef9ac4d939e6d1836481091f8Screenshot_16.png HTTP/1.1" 304 0
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 155
+"GET /media/avatars/be3b4a9815b34ec78e5ec62f59bff82aScreenshot_17.png HTTP/1.1" 200 116035
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 187
+"GET /media/avatars/6af217677121444d8db53ebc202f49c2Screenshot_17__%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png HTTP/1.1" 200 80695
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/sign-out
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\response.py", line 59, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+           ^^^^^^^^
+AssertionError: .accepted_renderer not set on Response
+"POST /api/sign-out HTTP/1.1" 500 73398
+"GET / HTTP/1.1" 200 19684
+Not Found: /api/products/limited
+"GET /api/products/limited HTTP/1.1" 404 8176
+Not Found: /api/banners
+Not Found: /api/products/popular
+"GET /api/banners HTTP/1.1" 404 8149
+Not Found: /api/categories
+"GET /api/products/popular HTTP/1.1" 404 8176
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+Not Found: /api/products/limited
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /sign-in/ HTTP/1.1" 200 12766
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /sign-up/ HTTP/1.1" 200 12882
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"POST /api/sign-up HTTP/1.1" 201 0
+"GET / HTTP/1.1" 200 19885
+Not Found: /api/products/limited
+"GET /api/products/limited HTTP/1.1" 404 8176
+Not Found: /api/categories
+Not Found: /api/products/limited
+Not Found: /api/products/popular
+Not Found: /api/banners
+Not Found: /api/basket
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/products/popular HTTP/1.1" 404 8176
+"GET /api/banners HTTP/1.1" 404 8149
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /profile/ HTTP/1.1" 200 17613
+"GET /api/profile HTTP/1.1" 200 96
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 134
+"GET /media/avatars/f78460e69dd24b1ba1d7f9d4b4d931b5Screenshot_16.png HTTP/1.1" 200 126850
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 134
+"GET /media/avatars/a176cd317e144cc98f75e5c60fe25c5eScreenshot_18.png HTTP/1.1" 200 24288
+"GET /profile/ HTTP/1.1" 200 17613
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/profile HTTP/1.1" 200 134
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /media/avatars/a176cd317e144cc98f75e5c60fe25c5eScreenshot_18.png HTTP/1.1" 304 0
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 166
+"GET /media/avatars/e4499521015149cd8fcb30f5df282d34Screenshot_14__%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png HTTP/1.1" 200 121821
+"GET /profile/ HTTP/1.1" 200 17613
+Not Found: /api/basket
+Not Found: /api/categories
+"GET /api/profile HTTP/1.1" 200 166
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /media/avatars/e4499521015149cd8fcb30f5df282d34Screenshot_14__%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png HTTP/1.1" 304 0
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 19885
+Not Found: /api/products/limited
+Not Found: /api/banners
+Not Found: /api/products/popular
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /api/banners HTTP/1.1" 404 8149
+Not Found: /api/categories
+"GET /api/products/popular HTTP/1.1" 404 8176
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+Not Found: /api/products/limited
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /profile/ HTTP/1.1" 200 17613
+Not Found: /api/basket
+Not Found: /api/categories
+"GET /api/profile HTTP/1.1" 200 166
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/categories HTTP/1.1" 404 8158
+Not Found: /media/avatars/e4499521015149cd8fcb30f5df282d34Screenshot_14__\u043a\u043e\u043f\u0438\u044f.png
+"GET /media/avatars/e4499521015149cd8fcb30f5df282d34Screenshot_14__%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png HTTP/1.1" 404 7224
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 134
+"GET /media/avatars/ffba472b723849f8b83a0a20c2daddf7Screenshot_15.png HTTP/1.1" 200 135247
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+"GET /profile/ HTTP/1.1" 200 17613
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/profile HTTP/1.1" 200 134
+"GET /media/avatars/ffba472b723849f8b83a0a20c2daddf7Screenshot_15.png HTTP/1.1" 304 0
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+"GET /profile/ HTTP/1.1" 200 17613
+Not Found: /api/categories
+"GET /api/categories HTTP/1.1" 404 8158
+Not Found: /api/basket
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/profile HTTP/1.1" 200 134
+"GET /media/avatars/ffba472b723849f8b83a0a20c2daddf7Screenshot_15.png HTTP/1.1" 304 0
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 138
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 138
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/profile
+"POST /api/profile HTTP/1.1" 400 88
+"POST /api/profile HTTP/1.1" 200 157
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\myauth\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 157
+"GET /media/avatars/3b6cbd98769a463c8777a84a23f066eeScreenshot_19.png HTTP/1.1" 200 17079
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Super\Desktop\python_django_diploma\diploma-backend\megano\apps\goods\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /api/sign-out
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\response.py", line 59, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+           ^^^^^^^^
+AssertionError: .accepted_renderer not set on Response
+"POST /api/sign-out HTTP/1.1" 500 73399
+"GET / HTTP/1.1" 200 19684
+Not Found: /api/products/limited
+"GET /api/products/limited HTTP/1.1" 404 8176
+Not Found: /api/banners
+Not Found: /api/products/popular
+"GET /api/banners HTTP/1.1" 404 8149
+Not Found: /api/products/limited
+"GET /api/products/popular HTTP/1.1" 404 8176
+Not Found: /api/categories
+"GET /api/products/limited HTTP/1.1" 404 8176
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /sign-in/ HTTP/1.1" 200 12766
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /sign-up/ HTTP/1.1" 200 12882
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"POST /api/sign-up HTTP/1.1" 201 0
+"GET / HTTP/1.1" 200 19884
+Not Found: /api/products/limited
+Not Found: /api/banners
+Not Found: /api/products/popular
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /api/banners HTTP/1.1" 404 8149
+"GET /api/products/popular HTTP/1.1" 404 8176
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+Not Found: /api/products/limited
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /profile/ HTTP/1.1" 200 17612
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/profile HTTP/1.1" 200 96
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"POST /api/profile/avatar HTTP/1.1" 200 0
+"GET /api/profile HTTP/1.1" 200 134
+"GET /media/avatars/960eb21f15ca46fa9353533a77f99228Screenshot_12.png HTTP/1.1" 200 25924
+"GET /profile/ HTTP/1.1" 200 17612
+Not Found: /api/basket
+Not Found: /api/categories
+"GET /api/profile HTTP/1.1" 200 134
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /media/avatars/960eb21f15ca46fa9353533a77f99228Screenshot_12.png HTTP/1.1" 304 0
+"POST /api/profile HTTP/1.1" 200 155
+"GET /profile/ HTTP/1.1" 200 17612
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/profile HTTP/1.1" 200 155
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /media/avatars/960eb21f15ca46fa9353533a77f99228Screenshot_12.png HTTP/1.1" 304 0
+"POST /api/profile/password HTTP/1.1" 200 56
+"GET /profile/ HTTP/1.1" 200 17612
+Not Found: /api/basket
+Not Found: /api/categories
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/categories HTTP/1.1" 404 8158
+"GET /api/profile HTTP/1.1" 200 155
+"GET /media/avatars/960eb21f15ca46fa9353533a77f99228Screenshot_12.png HTTP/1.1" 304 0
+Internal Server Error: /api/sign-out
+Traceback (most recent call last):
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super\AppData\Local\pypoetry\Cache\virtualenvs\python-django-diploma-bgNfr8Ln-py3.12\Lib\site-packages\rest_framework\response.py", line 59, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+           ^^^^^^^^
+AssertionError: .accepted_renderer not set on Response
+"POST /api/sign-out HTTP/1.1" 500 73399
+"GET / HTTP/1.1" 200 19684
+Not Found: /api/products/limited
+Not Found: /api/products/popular
+Not Found: /api/banners
+Not Found: /api/categories
+Not Found: /api/basket
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /api/products/popular HTTP/1.1" 404 8176
+"GET /api/banners HTTP/1.1" 404 8149
+"GET /api/categories HTTP/1.1" 404 8158
+Not Found: /api/products/limited
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /sign-in/ HTTP/1.1" 200 12766
+Not Found: /api/categories
+"GET /api/categories HTTP/1.1" 404 8158
+Not Found: /api/basket
+"GET /api/basket HTTP/1.1" 404 8146
+Internal Server Error: /api/sign-in
+"POST /api/sign-in HTTP/1.1" 500 0
+"POST /api/sign-in HTTP/1.1" 201 0
+"GET / HTTP/1.1" 200 19884
+Not Found: /api/products/limited
+Not Found: /api/banners
+Not Found: /api/basket
+Not Found: /api/products/popular
+Not Found: /api/categories
+"GET /api/products/limited HTTP/1.1" 404 8176
+"GET /api/basket HTTP/1.1" 404 8146
+"GET /api/banners HTTP/1.1" 404 8149
+"GET /api/products/popular HTTP/1.1" 404 8176
+"GET /api/categories HTTP/1.1" 404 8158
+Not Found: /api/products/limited
+"GET /api/products/limited HTTP/1.1" 404 8176
