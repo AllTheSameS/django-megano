@@ -2,8 +2,17 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 
+from megano.settings import DEFAULT_PRODUCT_IMAGE_PATH, PRODUCT_IMAGE_DOWNLOAD_PATH
+
 
 class Category(models.Model):
+    """
+    Модель категории товара.
+
+    Attributes:
+        title(CharField): Название категории.
+        parent(ForeignKey): Ссылка на себя.
+    """
     class Meta:
         ordering = ('title',)
         verbose_name = 'Категория'
@@ -30,6 +39,12 @@ class Category(models.Model):
 
 
 class Tag(models.Model):
+    """
+    Модель тэга товара.
+
+    Attributes:
+        name(CharField): Название тэга.
+    """
     class Meta:
         ordering = ('name',)
         verbose_name = 'Тэг'
@@ -38,7 +53,7 @@ class Tag(models.Model):
     name = models.CharField(
         max_length=20,
         unique=True,
-        verbose_name="Название тега",
+        verbose_name="Название тэга",
     )
 
     def __str__(self):
@@ -46,6 +61,12 @@ class Tag(models.Model):
 
 
 class Specification(models.Model):
+    """
+    Модель характеристики.
+
+    Attributes:
+        name(CharField): Название характеристики.
+    """
     class Meta:
         ordering = ('name',)
         verbose_name = 'Характеристика'
@@ -61,6 +82,14 @@ class Specification(models.Model):
         return self.name
 
 class ProductSpecification(models.Model):
+    """
+    Модель характеристики товара.
+
+    Attributes:
+        product(ForeignKey): Ссылка на продукт.
+        specification(ForeignKey): Ссылка на характеристику.
+        value(CharField): Значение.
+    """
     class Meta:
         verbose_name = 'Характеристика товара'
         verbose_name_plural = 'Характеристики товаров'
@@ -88,9 +117,22 @@ class ProductSpecification(models.Model):
 
 
 class Review(models.Model):
+    """
+    Модель отзыва.
+
+    Attributes:
+        author(ForeignKey): Ссылка на пользователя.
+        text(CharField): Текст отзыва.
+        vratealue(FloatField): Рейтинг.
+        product(ForeignKey): Ссылка на товар.
+        created(DateTimeField): Дата создания.
+        updated(DateTimeField): Дата обновления.
+    """
     class Meta:
+        ordering = ('-created',)
         verbose_name = 'Отзыв'
         verbose_name_plural = 'Отзывы'
+        unique_together = ('author', 'product')
 
     author = models.ForeignKey(
         User,
@@ -104,9 +146,8 @@ class Review(models.Model):
         verbose_name='Текст отзыва',
     )
     rate = models.FloatField(
-        blank=True,
-        null=True,
-        default=None,
+        blank=False,
+        null=False,
         validators=[MinValueValidator(1), MaxValueValidator(5)],
         verbose_name='Рейтинг',
     )
@@ -127,6 +168,23 @@ class Review(models.Model):
 
 
 class Product(models.Model):
+    """
+    Модель продукта.
+
+    Attributes:
+        category(ForeignKey): Ссылка на категорию.
+        tags(ManyToManyField): Ссылка на тэги.
+        specifications(ManyToManyField): Ссылка на характеристики.
+        title(CharField): Название.
+        price(DecimalField): Цена.
+        count(IntegerField): Количество.
+        description(CharField): Описание.
+        full_description(TextField): Полное описание.
+        free_delivery(BooleanField): Бесплатная доставка.
+        rating(FloatField): Рейтинг.
+        created(DateTimeField): Дата создания.
+        updated(DateTimeField): Дата обновления.
+    """
     class Meta:
         ordering = ('title',)
         verbose_name = 'Продукт'
@@ -135,42 +193,38 @@ class Product(models.Model):
     category = models.ForeignKey(
         Category,
         on_delete=models.CASCADE,
+        db_index=True,
         related_name='products',
         verbose_name='Категория',
     )
     tags = models.ManyToManyField(
         Tag,
-        related_name='products',
         blank=True,
-        verbose_name='Тэг',
+        related_name='products',
+        verbose_name='Тэги',
     )
     specifications = models.ManyToManyField(
         Specification,
         through=ProductSpecification,
         related_name='products',
-        verbose_name='Характеристика',
-    )
-
-    price = models.DecimalField(
-        max_digits=10,
-        decimal_places=2,
-        validators=[MinValueValidator(0)],
-        verbose_name='Цена',
-    )
-    count = models.IntegerField(
-        default=0,
-        validators=[MinValueValidator(0)],
-        verbose_name="Количество товара",
+        verbose_name='Характеристики',
     )
     title = models.CharField(
         max_length=50,
         db_index=True,
         verbose_name='Название',
     )
-    image = models.ImageField(
-        upload_to='products/%Y/%m/%d',
-        blank=True,
-        verbose_name='Картинка',
+    price = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        db_index=True,
+        validators=[MinValueValidator(0.01)],
+        verbose_name='Цена',
+    )
+    count = models.IntegerField(
+        default=0,
+        validators=[MinValueValidator(0)],
+        verbose_name="Количество товара",
     )
     description = models.CharField(
         max_length=128,
@@ -193,6 +247,7 @@ class Product(models.Model):
     )
     created = models.DateTimeField(
         auto_now_add=True,
+        db_index=True,
         verbose_name='Дата создания',
 
     )
@@ -200,3 +255,39 @@ class Product(models.Model):
         auto_now=True,
         verbose_name='Дата обновления',
     )
+
+    def __str__(self):
+        return self.title
+
+
+class ProductImage(models.Model):
+    """
+    Модель изображения продукта.
+
+    Attributes:
+        src(ImageField): Изображение.
+        alt(CharField): Альтернативный текст.
+    """
+    class Meta:
+        verbose_name = "Изображение продукта"
+        verbose_name_plural = "Изображения продукта"
+
+    src = models.ImageField(
+        upload_to=PRODUCT_IMAGE_DOWNLOAD_PATH,
+        default=DEFAULT_PRODUCT_IMAGE_PATH,
+        verbose_name="Ссылка",
+    )
+    alt = models.CharField(
+        max_length=128,
+        verbose_name="Альтернативный текст",
+    )
+
+    product = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+        related_name='images',
+        verbose_name='Продукт',
+    )
+
+    def __str__(self):
+        return self.alt if self.alt else "Изображение продукта"

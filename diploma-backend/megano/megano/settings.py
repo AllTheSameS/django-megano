@@ -198,5 +198,9 @@ LOGGING = {
 }
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
 AVATAR_DOWNLOAD_PATH = 'avatars/'
 DEFAULT_AVATAR_PATH = 'avatars/default.jpg'
+
+PRODUCT_IMAGE_DOWNLOAD_PATH = 'products/'
+DEFAULT_PRODUCT_IMAGE_PATH = 'products/default_product_image.jpg'
