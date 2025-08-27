@@ -256,6 +256,24 @@ class Product(models.Model):
         verbose_name='Дата обновления',
     )
 
+    def set(self, **kwargs):
+        """
+        Упрощенная версия set метода для установки полей продукта.
+        """
+        # Устанавливаем основные поля
+        for field, value in kwargs.items():
+            if hasattr(self, field):
+                field_obj = getattr(self, field)
+
+                # Для ManyToMany полей используем set()
+                if isinstance(field_obj, models.ManyToManyField):
+                    getattr(self, field).set(value)
+                else:
+                    setattr(self, field, value)
+
+        self.save()
+        return self
+
     def __str__(self):
         return self.title
 
