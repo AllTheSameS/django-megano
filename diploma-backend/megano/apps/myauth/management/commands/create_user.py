@@ -19,4 +19,7 @@ class Command(BaseCommand):
             email=random_email,
             phone=random_phone,
             full_name='test_user',)
+        self.stdout.write(
+            self.style.SUCCESS(f'Создан пользователь: {user.username}')
+        )
         return user.username

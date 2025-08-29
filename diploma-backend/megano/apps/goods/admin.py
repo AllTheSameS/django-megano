@@ -80,8 +80,8 @@ class ReviewInline(admin.TabularInline):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
-        'title', 'category', 'price', 'count', 
-        'rating', 'free_delivery', 'created'
+        'id', 'title', 'category', 'price', 'count',
+        'rating', 'free_delivery', 'created',
     )
     list_filter = ('category', 'tags', 'free_delivery', 'created')
     search_fields = ('title', 'description', 'full_description')

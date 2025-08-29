@@ -21,7 +21,6 @@ class Category(models.Model):
     title = models.CharField(
         max_length=20,
         unique=True,
-        db_index=True,
         verbose_name="Категория",
         )
 
@@ -137,6 +136,7 @@ class Review(models.Model):
     author = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
+        db_index=True,
         related_name='reviews_authored',
         verbose_name='Автор',
     )
@@ -148,12 +148,14 @@ class Review(models.Model):
     rate = models.FloatField(
         blank=False,
         null=False,
+        db_index=True,
         validators=[MinValueValidator(1), MaxValueValidator(5)],
         verbose_name='Рейтинг',
     )
     product = models.ForeignKey(
         'Product',
         on_delete=models.CASCADE,
+        db_index=True,
         related_name='reviews',
         verbose_name='Продукт',
     )
@@ -189,6 +191,11 @@ class Product(models.Model):
         ordering = ('title',)
         verbose_name = 'Продукт'
         verbose_name_plural = 'Продукты'
+        indexes = [
+            models.Index(fields=['category', 'price']),
+            models.Index(fields=['rating', '-created']),
+            models.Index(fields=['free_delivery', 'count']),
+        ]
 
     category = models.ForeignKey(
         Category,
@@ -218,10 +225,11 @@ class Product(models.Model):
         max_digits=10,
         decimal_places=2,
         db_index=True,
-        validators=[MinValueValidator(0.01)],
+        validators=[MinValueValidator(0)],
         verbose_name='Цена',
     )
     count = models.IntegerField(
+        db_index=True,
         default=0,
         validators=[MinValueValidator(0)],
         verbose_name="Количество товара",
@@ -236,14 +244,17 @@ class Product(models.Model):
         verbose_name='Полное описание',
     )
     free_delivery = models.BooleanField(
+        db_index=True,
         default=False,
         verbose_name='Бесплатная доставка',
     )
-    rating = models.FloatField(
-        default=None,
-        blank=True,
-        null=True,
+    rating = models.DecimalField(
+        max_digits=3,
+        decimal_places=2,
+        db_index=True,
+        default=0,
         verbose_name='Рейтинг',
+        validators=[MinValueValidator(0), MaxValueValidator(5)]
     )
     created = models.DateTimeField(
         auto_now_add=True,
@@ -255,24 +266,6 @@ class Product(models.Model):
         auto_now=True,
         verbose_name='Дата обновления',
     )
-
-    def set(self, **kwargs):
-        """
-        Упрощенная версия set метода для установки полей продукта.
-        """
-        # Устанавливаем основные поля
-        for field, value in kwargs.items():
-            if hasattr(self, field):
-                field_obj = getattr(self, field)
-
-                # Для ManyToMany полей используем set()
-                if isinstance(field_obj, models.ManyToManyField):
-                    getattr(self, field).set(value)
-                else:
-                    setattr(self, field, value)
-
-        self.save()
-        return self
 
     def __str__(self):
         return self.title

@@ -1,7 +1,9 @@
 from django.core.management.base import BaseCommand
-from django.core.files.base import ContentFile
+from django.core.management import call_command
+from django.contrib.auth.models import User
 
-from apps.goods.models import Product, Category, ProductImage, Tag, Specification, ProductSpecification
+from apps.goods.models import Product, Category, ProductImage, Tag, Specification, ProductSpecification, Review
+from megano.settings import DEFAULT_PRODUCT_IMAGE_PATH
 
 import random
 
@@ -98,7 +100,7 @@ class Command(BaseCommand):
                 description=f"Отличное качество и функциональность.",
                 full_description='Полное описание товара...',
                 free_delivery=random.choice([True, False]),
-                rating=random.uniform(1.0, 5.0)
+                rating=round(random.uniform(1.0, 5.0), 2)
             )
 
             product.save()
@@ -119,10 +121,27 @@ class Command(BaseCommand):
                 product_specs[spec] = value
                 ProductSpecification.objects.create(product=product, specification=spec, value=value)
             product.specifications.set(product_specs)
+
+            # Добавляем случайное количество картинок (1-5 картинок)
+            product_image = [ProductImage.objects.create(product=product, src=DEFAULT_PRODUCT_IMAGE_PATH) for _ in range(random.randint(1, 5))]
+            product.images.set(product_image)
+
+            # Создаем 1-3 пользователей для отзывов
+            users = [User.objects.get(username=call_command('create_user')) for _ in range(random.randint(1, 3))]
+            reviews = [
+                Review.objects.create(
+                        product=product,
+                        author=user,
+                        text='Отзыв',
+                        rate=random.randint(1, 5),
+                    ) for user in users
+            ]
+            product.reviews.set(reviews)
+
             created_count += 1
 
             self.stdout.write(
-                self.style.SUCCESS(f'Создан товар: {product.title} - {product.price} руб.')
+                self.style.SUCCESS(f'Создан товар: {product.title} - {round(product.price, 2)} руб.')
             )
 
         self.stdout.write(
