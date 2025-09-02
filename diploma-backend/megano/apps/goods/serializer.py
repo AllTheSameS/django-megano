@@ -12,6 +12,12 @@ class SpecificationSerializer(serializers.ModelSerializer):
         fields = ['name', 'value']
 
 
+class GetTagsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
+        fields = ['id', 'name']
+
+
 class TagSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tag

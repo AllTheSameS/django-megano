@@ -45,7 +45,6 @@ class SignUpView(APIView):
 
             return Response(status=status.HTTP_201_CREATED)
         except Exception as ex:
-            print(ex)
             return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
@@ -60,14 +59,14 @@ class ProfileView(APIView):
     def get(self, request):
         profile = Profile.objects.get(user=request.user)
         serializer = ProfileSerializer(profile)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request):
         profile = Profile.objects.get(user=request.user)
         serializer = ProfileSerializer(profile, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data)
+            return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
