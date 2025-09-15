@@ -22,11 +22,11 @@ class AvatarInline(admin.StackedInline):
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'full_name', 'phone', 'email', 'balance', 'created_at')
-    list_filter = ('created_at',)
+    list_display = ('user', 'full_name', 'phone', 'email', 'balance', 'date')
+    list_filter = ('date',)
     search_fields = ('user__username', 'full_name', 'phone', 'email')
-    readonly_fields = ('user', 'created_at', 'updated_at')
-    ordering = ('-created_at',)
+    readonly_fields = ('user', 'date', 'updated')
+    ordering = ('-date',)
     list_per_page = 25
 
     fieldsets = (
@@ -41,7 +41,7 @@ class ProfileAdmin(admin.ModelAdmin):
             'classes': ('collapse',)
         }),
         ('Даты', {
-            'fields': ('created_at', 'updated_at'),
+            'fields': ('created_at', 'updated'),
             'classes': ('collapse',)
         }),
     )

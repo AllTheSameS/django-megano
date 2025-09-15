@@ -1,171 +1,9 @@
 from django.db import models
-from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 
-from megano.settings import DEFAULT_PRODUCT_IMAGE_PATH, PRODUCT_IMAGE_DOWNLOAD_PATH
-
-
-class Category(models.Model):
-    """
-    Модель категории товара.
-
-    Attributes:
-        title(CharField): Название категории.
-        parent(ForeignKey): Ссылка на себя.
-    """
-    class Meta:
-        ordering = ('title',)
-        verbose_name = 'Категория'
-        verbose_name_plural = 'Категории'
-
-    title = models.CharField(
-        max_length=20,
-        unique=True,
-        verbose_name="Категория",
-        )
-
-    parent = models.ForeignKey(
-        'self',
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True,
-        related_name='subcategory',
-        verbose_name="Родительская категория",
-    )
-
-    def __str__(self):
-        return self.title
-
-
-class Tag(models.Model):
-    """
-    Модель тэга товара.
-
-    Attributes:
-        name(CharField): Название тэга.
-    """
-    class Meta:
-        ordering = ('name',)
-        verbose_name = 'Тэг'
-        verbose_name_plural = 'Тэги'
-
-    name = models.CharField(
-        max_length=20,
-        unique=True,
-        verbose_name="Название тэга",
-    )
-
-    def __str__(self):
-        return self.name
-
-
-class Specification(models.Model):
-    """
-    Модель характеристики.
-
-    Attributes:
-        name(CharField): Название характеристики.
-    """
-    class Meta:
-        ordering = ('name',)
-        verbose_name = 'Характеристика'
-        verbose_name_plural = 'Характеристики'
-
-    name = models.CharField(
-        max_length=20,
-        unique=True,
-        verbose_name="Название характеристики",
-        )
-
-    def __str__(self):
-        return self.name
-
-class ProductSpecification(models.Model):
-    """
-    Модель характеристики товара.
-
-    Attributes:
-        product(ForeignKey): Ссылка на продукт.
-        specification(ForeignKey): Ссылка на характеристику.
-        value(CharField): Значение.
-    """
-    class Meta:
-        verbose_name = 'Характеристика товара'
-        verbose_name_plural = 'Характеристики товаров'
-        unique_together = ('product', 'specification')
-
-    product = models.ForeignKey(
-        'Product',
-        on_delete=models.CASCADE,
-        related_name='specifications_values',
-        verbose_name='Товар',
-        )
-    specification = models.ForeignKey(
-        Specification,
-        on_delete=models.CASCADE,
-        related_name='product_specs',
-        verbose_name='Характеристика',
-        )
-    value = models.CharField(
-        max_length=20,
-        verbose_name='Значение',
-        )
-
-    def __str__(self):
-        return f"{self.specification.name}: {self.value}"
-
-
-class Review(models.Model):
-    """
-    Модель отзыва.
-
-    Attributes:
-        author(ForeignKey): Ссылка на пользователя.
-        text(CharField): Текст отзыва.
-        vratealue(FloatField): Рейтинг.
-        product(ForeignKey): Ссылка на товар.
-        created(DateTimeField): Дата создания.
-        updated(DateTimeField): Дата обновления.
-    """
-    class Meta:
-        ordering = ('-created',)
-        verbose_name = 'Отзыв'
-        verbose_name_plural = 'Отзывы'
-        unique_together = ('author', 'product')
-
-    author = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        db_index=True,
-        related_name='reviews_authored',
-        verbose_name='Автор',
-    )
-    text = models.CharField(
-        max_length=500,
-        blank=False,
-        verbose_name='Текст отзыва',
-    )
-    rate = models.FloatField(
-        blank=False,
-        null=False,
-        db_index=True,
-        validators=[MinValueValidator(1), MaxValueValidator(5)],
-        verbose_name='Рейтинг',
-    )
-    product = models.ForeignKey(
-        'Product',
-        on_delete=models.CASCADE,
-        db_index=True,
-        related_name='reviews',
-        verbose_name='Продукт',
-    )
-    created = models.DateTimeField(
-        auto_now_add=True,
-        verbose_name='Дата создания',
-    )
-    updated = models.DateTimeField(
-        auto_now=True,
-        verbose_name='Дата обновления',
+from megano.settings import (
+    DEFAULT_PRODUCT_IMAGE_PATH,
+    PRODUCT_IMAGE_DOWNLOAD_PATH,
     )
 
 
@@ -193,29 +31,24 @@ class Product(models.Model):
         verbose_name_plural = 'Продукты'
         indexes = [
             models.Index(fields=['category', 'price']),
-            models.Index(fields=['rating', '-created']),
+            models.Index(fields=['rating', '-date']),
             models.Index(fields=['free_delivery', 'count']),
         ]
 
     category = models.ForeignKey(
-        Category,
+        'characteristics.Category',
         on_delete=models.CASCADE,
         db_index=True,
         related_name='products',
         verbose_name='Категория',
     )
     tags = models.ManyToManyField(
-        Tag,
+        'characteristics.Tag',
         blank=True,
         related_name='products',
         verbose_name='Тэги',
     )
-    specifications = models.ManyToManyField(
-        Specification,
-        through=ProductSpecification,
-        related_name='products',
-        verbose_name='Характеристики',
-    )
+
     title = models.CharField(
         max_length=50,
         db_index=True,
@@ -256,7 +89,12 @@ class Product(models.Model):
         verbose_name='Рейтинг',
         validators=[MinValueValidator(0), MaxValueValidator(5)]
     )
-    created = models.DateTimeField(
+    available = models.BooleanField(
+        default=True,
+        db_index=True,
+        verbose_name='Доступность',
+    )
+    date = models.DateTimeField(
         auto_now_add=True,
         db_index=True,
         verbose_name='Дата создания',
@@ -292,9 +130,8 @@ class ProductImage(models.Model):
         max_length=128,
         verbose_name="Альтернативный текст",
     )
-
     product = models.ForeignKey(
-        Product,
+        'Product',
         on_delete=models.CASCADE,
         related_name='images',
         verbose_name='Продукт',

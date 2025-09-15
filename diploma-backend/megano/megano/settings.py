@@ -48,6 +48,10 @@ LOCAL_APPS = [
     'frontend',
     'apps.myauth',
     'apps.goods',
+    'apps.characteristics',
+    'apps.reviews',
+    'apps.sales',
+    'apps.banners'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -204,3 +208,6 @@ DEFAULT_AVATAR_PATH = 'avatars/default.jpg'
 
 PRODUCT_IMAGE_DOWNLOAD_PATH = 'products/'
 DEFAULT_PRODUCT_IMAGE_PATH = 'products/default_product_image.jpg'
+
+CATEGORY_IMAGE_DOWNLOAD_PATH = 'category/'
+DEFAULT_CATEGORY_IMAGE_PATH = 'category/default_category_image.jpg'

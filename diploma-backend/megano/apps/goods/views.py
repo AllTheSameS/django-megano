@@ -1,9 +1,70 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import status, permissions
+from rest_framework import status
 
-from .models import Product, Review, Tag
-from .serializer import ProductDetailSerializer, ReviewCreateSerializer, GetTagsSerializer
+from django.db.models import Count, Value, IntegerField
+from django.db.models.functions import Coalesce
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
+from .models import  Product
+from .serializers import ProductDetailSerializer, ProductSerializer
+from .utils.filter_and_sort_catalog import ProductFilterService
+
+
+class ProductView(APIView):
+    """
+    Представление работы с каталогом.
+    """
+    def get(self, request):
+        """
+        GET /catalog
+
+        Метод получения продуктов по фильтрам.
+        """
+        try:
+            # Построение фильтров
+            filters = ProductFilterService.build_filters(request.GET)
+            # Аннотация и фильтрация продуктов
+            products = Product.objects.annotate(
+                reviews_count=Coalesce(Count('reviews'), Value(0), output_field=IntegerField())
+            ).filter(filters).distinct()
+            # Сортировка
+            sort_by = ProductFilterService.get_sort_params(request.GET)
+            products = products.order_by(sort_by)
+
+            # Пагинация
+            page = int(request.GET.get('currentPage', 1))
+            limit = int(request.GET.get('limit', 20))
+
+            # Создаем пагинатор
+            paginator = Paginator(products, limit)
+
+            try:
+                page_obj = paginator.page(page)
+            except PageNotAnInteger:
+                page_obj = paginator.page(1)
+            except EmptyPage:
+                page_obj = paginator.page(paginator.num_pages)
+
+            # Сериализация
+            serializer = ProductSerializer(page_obj.object_list, many=True)
+            return Response({
+                'items': serializer.data,
+                'currentPage': page_obj.number,
+                'lastPage': paginator.num_pages,
+            }, status=status.HTTP_200_OK)
+
+        except ValueError:
+            return Response(
+                {'error': 'The price must be a number.'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        except Exception:
+            return Response(
+                {'error': 'Internal server error'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                )
+
 
 
 class ProductDetailsView(APIView):
@@ -23,7 +84,7 @@ class ProductDetailsView(APIView):
             product = Product.objects.select_related('category').prefetch_related(
                     'tags',
                     'specifications_values__specification',
-                    'reviews__author',
+                    'reviews',
                     'images'
                 ).get(pk=id)
             serializer = ProductDetailSerializer(product)
@@ -38,60 +99,3 @@ class ProductDetailsView(APIView):
                 {'error': 'Internal server error'},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
-
-
-class ProductReviewView(APIView):
-    """
-    Представление работы с отзывами продукта.
-    """
-    permission_classes = [permissions.IsAuthenticated]
-
-    def post(self, request, id):
-        """
-        POST /product/<int:id>/reviews
-
-        Метод создания отзыва о продукте по ID.
-
-        Attributes:
-            id(int): ID продукта.
-        """
-        try:
-            Product.objects.get(pk=id)
-
-            if Review.objects.filter(product_id=id, author=request.user).exists():
-                return Response(
-                    {"error": "You have already left a review for this product."},
-                    status=status.HTTP_400_BAD_REQUEST
-                )
-
-            request.data['product'] = id
-            request.data['author'] = request.user.id
-            serializer = ReviewCreateSerializer(data=request.data)
-
-
-            if serializer.is_valid():
-                serializer.save()
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-        except Product.DoesNotExist:
-            return Response({"error": "Product not found"}, status=status.HTTP_404_NOT_FOUND)
-        except Exception:
-            return Response({"error": "Internal server error"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-
-class TagsView(APIView):
-    """
-    Представление рыботы с тэгами.
-    """
-    def get(self, request):
-        """
-        GET /tags
-
-        Метод получения всех тэгов.
-        """
-        try:
-            tags = Tag.objects.all()
-            serializer = GetTagsSerializer(tags, many=True)
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        except Exception:
-            return Response({"error": "Internal server error"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

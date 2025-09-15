@@ -16,8 +16,8 @@ class Profile(models.Model):
         phone(CharField): Номер телефона.
         email(EmailField): Email адрес.
         balance(DecimalField): Баланс.
-        created_at(DateTimeField): Дата создания профиля.
-        updated_at(DateTimeField): Дата обновления профиля.
+        date(DateTimeField): Дата создания профиля.
+        updated(DateTimeField): Дата обновления профиля.
     """
 
     class Meta:
@@ -53,11 +53,11 @@ class Profile(models.Model):
         default=0,
         verbose_name="Баланс",
     )
-    created_at = models.DateTimeField(
+    date = models.DateTimeField(
         auto_now_add=True,
         verbose_name='Дата создания',
     )
-    updated_at = models.DateTimeField(
+    updated = models.DateTimeField(
         auto_now=True,
         verbose_name='Дата обновления',
     )
