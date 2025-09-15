@@ -28,15 +28,13 @@ class BannerView(APIView):
                     'images'
                 ).annotate(reviewsCount=Count('reviews'))
             serializer = BannerSerializer(product, many=True)
-            print(serializer.data)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Product.DoesNotExist:
             return Response(
                 {'error': 'Not found'},
                 status=status.HTTP_404_NOT_FOUND,
             )
-        except Exception as e:
-            print(e)
+        except Exception:
             return Response(
                 {'error': 'Internal server error'},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,

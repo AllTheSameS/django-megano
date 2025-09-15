@@ -99,3 +99,47 @@ class ProductDetailsView(APIView):
                 {'error': 'Internal server error'},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
+
+
+class ProductPopularView(APIView):
+    """
+    Представление работы с популярными продуктами.
+    """
+    def get(self, request):
+        """
+        GET /products/popular
+
+        Метод получения каталога ограниченных товаров.
+        """
+        try:
+            product = Product.objects.filter(
+            shopping_counter__gt=0
+        ).order_by('-shopping_counter')[:8]
+            serializer = ProductSerializer(product, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Exception:
+            return Response(
+                {'error': 'Internal server error'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )
+
+
+class ProductLimitedView(APIView):
+    """
+    Представление работы с продуктами.
+    """
+    def get(self, request):
+        """
+        GET /products/limited
+
+        Метод получения каталога ограниченных продуктов.
+        """
+        try:
+            product = Product.objects.filter(limited_edition=True)[:16]
+            serializer = ProductSerializer(product, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Exception:
+            return Response(
+                {'error': 'Internal server error'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )

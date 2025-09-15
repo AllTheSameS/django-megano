@@ -28,7 +28,7 @@ class Command(BaseCommand):
             brands = ["Samsung", "Apple", "Sony", "LG", "Xiaomi", "Huawei", "Philips", "Bosch",]
 
             characteristics = {
-                "Смартфон": {
+                "Смартфоны": {
                     "Экран": ["6.1″ OLED", "6.7″ AMOLED", "6.4″ IPS", "120Hz", "90Hz", "60Hz"],
                     "Разрешение": ["Full HD+", "Quad HD+", "4K", "720x1600", "1080x2400"],
                     "Процессор": ["Snapdragon 8 Gen 2", "A16 Bionic", "Exynos 2200", "MediaTek Dimensity 9000"],
@@ -57,7 +57,7 @@ class Command(BaseCommand):
                     "Микрофон": ["встроенный", "с шумоподавлением", "съемный"],
                     "Дополнительно": ["кастомный эквалайзер", "мультиподключение", "сенсорное управление"]
                 },
-                "Телевизор": {
+                "Телевизоры": {
                     "Диагональ": ["43″", "55″", "65″", "75″", "85″"],
                     "Разрешение": ["4K UHD", "8K UHD", "QLED", "OLED"],
                     "HDR": ["HDR10", "Dolby Vision", "HLG", "HDR10+"],
@@ -99,6 +99,8 @@ class Command(BaseCommand):
                     title=product_name,
                     price=random.uniform(100, 10000),
                     count=random.randint(0, 100),
+                    limited_edition=random.choice([True, False]),
+                    shopping_counter=random.randint(0, 100),
                     description=f"Отличное качество и функциональность.",
                     full_description='Полное описание товара...',
                     free_delivery=random.choice([True, False]),

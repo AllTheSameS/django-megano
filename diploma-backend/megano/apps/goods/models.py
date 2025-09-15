@@ -67,6 +67,16 @@ class Product(models.Model):
         validators=[MinValueValidator(0)],
         verbose_name="Количество товара",
     )
+    shopping_counter = models.IntegerField(
+        db_index=True,
+        default=0,
+        verbose_name="Количество покупок товара",
+    )
+    limited_edition = models.BooleanField(
+        db_index=True,
+        default=False,
+        verbose_name='Ограниченый тираж',
+    )
     description = models.CharField(
         max_length=128,
         blank=True,
