@@ -2,6 +2,8 @@ from django.db import models
 from django.core.validators import MinValueValidator
 from django.core.exceptions import ValidationError
 
+from datetime import timezone
+
 
 class Sale(models.Model):
     """
@@ -44,6 +46,14 @@ class Sale(models.Model):
 
     def __str__(self):
         return f'{self.products.first().product.title}'
+
+    @property
+    def is_current(self):
+        """Проверяет, действует ли скидка в текущий момент."""
+        now = timezone.now()
+        return (self.is_active and
+                self.date_from <= now and
+                (self.date_to is None or self.date_to >= now))
 
 
 class SaleProduct(models.Model):

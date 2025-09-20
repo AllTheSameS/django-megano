@@ -42,6 +42,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     'rest_framework',
     'drf_spectacular',
+    'mptt',
 ]
 
 LOCAL_APPS = [
@@ -51,7 +52,10 @@ LOCAL_APPS = [
     'apps.characteristics',
     'apps.reviews',
     'apps.sales',
-    'apps.banners'
+    'apps.banners',
+    'apps.basket',
+    'apps.orders',
+    'apps.payment',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -211,3 +215,5 @@ DEFAULT_PRODUCT_IMAGE_PATH = 'products/default_product_image.jpg'
 
 CATEGORY_IMAGE_DOWNLOAD_PATH = 'category/'
 DEFAULT_CATEGORY_IMAGE_PATH = 'category/default_category_image.jpg'
+
+PAYMENT_GATEWAY = config('PAYMENT_GATEWAY', 'mock')

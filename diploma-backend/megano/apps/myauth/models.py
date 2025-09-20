@@ -1,9 +1,10 @@
+"""
+Модуль работы с профилем и аватаром пользователя.
+"""
 from django.db import models
 from django.contrib.auth.models import User
 
 from megano.settings import DEFAULT_AVATAR_PATH, AVATAR_DOWNLOAD_PATH
-
-from .utils.validators import phone_validator
 
 
 class Profile(models.Model):

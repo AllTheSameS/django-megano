@@ -26,7 +26,7 @@ class BannerView(APIView):
                     'specifications_values__specification',
                     'reviews',
                     'images'
-                ).annotate(reviewsCount=Count('reviews'))
+                ).annotate(reviewsCount=Count('reviews'))[:5]
             serializer = BannerSerializer(product, many=True)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Product.DoesNotExist:
