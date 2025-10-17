@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Q
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 from megano.settings import (
@@ -117,6 +118,47 @@ class Product(models.Model):
 
     def __str__(self):
         return self.title
+
+    def update_shopping_counter(self, shopping_count):
+        """
+        Метод обновления счетчика покупок продукта.
+        """
+        self.shopping_counter += shopping_count
+        return self.shopping_counter
+
+    def update_count(self, shopping_count):
+        """
+        Метод обновленния количества продукта.
+        """
+        self.count -= shopping_count
+        return self.count
+
+    def update_product_rating(self):
+        """
+        Обновление рейтинга продукта на основе всех отзывов.
+        """
+        product_reviews = self.reviews.all()
+        print(product_reviews)
+
+        if product_reviews.exists():
+            total_rating = sum(review.rate for review in product_reviews)
+            average_rating = total_rating / product_reviews.count()
+
+            self.rating = round(average_rating, 2)
+            return self.rating
+
+    def get_price(self):
+        """
+        Метод получения активной скидки.
+        """
+        sale = self.sales.filter(sale__is_active=True).first()
+        return sale.sale.sale_price if sale and sale.sale.is_active else self.price
+
+    def checking_count_goods(self, count):
+        """
+        Метод проверки количества продукта в магазине с количесвом покупаемого продукта.
+        """
+        return True if self.count >= count else False
 
 
 class ProductImage(models.Model):

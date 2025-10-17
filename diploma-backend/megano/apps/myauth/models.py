@@ -41,11 +41,13 @@ class Profile(models.Model):
         unique=True,
         max_length=20,
         blank=True,
+        null=True,
         verbose_name='Телефон',
     )
     email = models.EmailField(
         unique=True,
         blank=True,
+        null=True,
         verbose_name='Электронная почта',
     )
     balance = models.DecimalField(

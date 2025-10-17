@@ -4,10 +4,17 @@ from rest_framework import status
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+from apps.utils.utils import BaseView
+
 from .models import SaleProduct
 from .serializers import SaleProductSerializer
 
-class SalesView(APIView):
+import logging
+
+logger = logging.getLogger('sales')
+
+
+class SalesView(APIView, BaseView):
     """
     Представление работы с продуктами со скидкой.
     """
@@ -16,22 +23,21 @@ class SalesView(APIView):
         GET /sales
 
         Метод получения продуктов со скидкой.
+
+        Attributes:
+            request: Метаданные запроса.
         """
         try:
-            # Фильтруем продукты с ненулевой скидкой
-            sale_products = SaleProduct.objects.select_related('product')
-            # Пагинация
+            logger.info('Get sales.')
+            sale_products = self._get_sale_products()
             page = int(request.GET.get('currentPage', 1))
             limit = int(request.GET.get('limit', 20))
 
-            # Создаем пагинатор
-            paginator = Paginator(sale_products, limit)
-            try:
-                page_obj = paginator.page(page)
-            except PageNotAnInteger:
-                page_obj = paginator.page(1)
-            except EmptyPage:
-                page_obj = paginator.page(paginator.num_pages)
+            paginator, page_obj = self._create_paginator(
+                products=sale_products,
+                page=page,
+                limit=limit,
+                )
             serializer = SaleProductSerializer(page_obj.object_list, many=True)
             return Response({
                 'items': serializer.data,
@@ -39,7 +45,36 @@ class SalesView(APIView):
                 'lastPage': paginator.num_pages,
             }, status=status.HTTP_200_OK)
 
-        except Exception:
-            return Response(
-                {"error": "Internal server error"},
-                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,)
+        except Exception as e:
+            return self._handle_error(
+                message=str(e),
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                logger=logger,
+            )
+
+    def _get_sale_products(self):
+        """
+        Вспомогательный метод получения скидок.
+        """
+        logger.debug('Get sales.')
+        return SaleProduct.objects.select_related('product').filter(sale__is_active=True)
+
+    def _create_paginator(self, products, page, limit):
+        """
+        Создание пагинатора.
+
+        Attributes:
+            products: Список продуктов.
+            page: Страница.
+            limit: Лимит страниц.
+        """
+        logger.debug('Create paginator.')
+        paginator = Paginator(products, limit)
+        result_page = ''
+        try:
+            page = paginator.page(page)
+        except PageNotAnInteger:
+            page = paginator.page(1)
+        except EmptyPage:
+            page = paginator.page(paginator.num_pages)
+        return paginator, result_page

@@ -15,7 +15,7 @@ class OrderItemSerializer(serializers.ModelSerializer):
         fields = ['id',  'title', 'images', 'count', 'price']
 
     def get_price(self, obj):
-        return obj.product.sales.first().sale.sale_price if obj.product.sales.first() else obj.product.price
+        return obj.product.get_price()
 
 
 class OrderSerializer(serializers.ModelSerializer):

@@ -1,3 +1,20 @@
+"""
+Модуль представлений приложения "myauth".
+
+Views:
+    SignInView()
+        Представление аутентификации пользователя.
+
+    SignUpView()
+        Предствление регистрации пользователя.
+
+    ProductPopularView()
+        Представление работы с популярными продуктами.
+
+    ProductLimitedView()
+        Представление работы с продуктами.
+"""
+
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import check_password
@@ -8,33 +25,83 @@ from rest_framework import status, permissions
 from rest_framework.parsers import MultiPartParser
 
 from .models import Profile, Avatar
-from .serializer import ProfileSerializer, AvatarUpdateSerializer
-from .utils.delete_avatar import delete_avatar
+from .serializers import ProfileSerializer, AvatarUpdateSerializer
+
+from apps.utils.utils import BaseView
 
 import json
 import uuid
+import logging
 
-class SignInView(APIView):
+logger = logging.getLogger('myauth')
+
+
+class SignInView(APIView, BaseView):
+    """
+    Представление аутентификации пользователя.
+
+    Methods:
+        post: Аутентификация пользователя.
+    """
     def post(self, request):
-        serialized_data = json.loads(request.body)
-        username = serialized_data["username"]
-        password = serialized_data["password"]
+        """
+        Аутентификация пользователя.
 
-        user = authenticate(request, username=username, password=password)
+        POST /api/sign-in
 
-        if user is not None:
-            login(request, user)
-            return Response(status=status.HTTP_201_CREATED)
-        return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        Attributes:
+            request: Метаданные запроса.
+        """
+        try:
+            serialized_data = json.loads(request.body)
+            username = serialized_data["username"]
+            password = serialized_data["password"]
+            logger.info('User authentication %s', username)
+
+            user = authenticate(request, username=username, password=password)
+
+            if user is not None:
+                login(request, user)
+                return self._build_response(
+                    status=status.HTTP_200_OK,
+                    logger=logger,
+                )
+            else:
+                return self._handle_error(
+                    message='Authentication Error.',
+                    status=status.HTTP_400_BAD_REQUEST,
+                    logger=logger,
+                    )
+        except Exception as e:
+            return self._handle_error(
+                message=str(e),
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                logger=logger,
+            )
 
 
-class SignUpView(APIView):
+class SignUpView(APIView, BaseView):
+    """
+    Предствление регистрации пользователя.
+
+    Methods:
+        post: Регистрация пользователя.
+    """
     def post(self, request):
+        """
+        Регистрация пользователя.
+
+        POST /api/sign-up
+
+        Attributes:
+            request: Метаданные запроса.
+        """
         serialized_data = json.loads(request.body)
         name = serialized_data["name"]
         username = serialized_data["username"]
         password = serialized_data["password"]
 
+        logger.info('User registration %s', username)
         try:
             user = User.objects.create_user(username=username, password=password)
             profile = Profile.objects.create(user=user, full_name=name)
@@ -43,52 +110,134 @@ class SignUpView(APIView):
             if user is not None:
                 login(request, user)
 
-            return Response(status=status.HTTP_201_CREATED)
-        except Exception as ex:
-            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return self._build_response(
+                status=status.HTTP_201_CREATED,
+                logger=logger,
+            )
+        except Exception as e:
+            return self._handle_error(
+                message=str(e),
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                logger=logger,
+            )
 
 
-def signOut(request):
-    logout(request)
-    return Response(status=status.HTTP_200_OK)
+class SignOut(APIView, BaseView):
+    """
+    Представление выхода пользователя.
+    """
+
+    def post(self, request):
+        """
+        Выход пользователя.
+
+        POST /api/sign-out
+
+        Attributes:
+            request: Метаданные запроса.
+
+        """
+        logout(request)
+        return Response(status=status.HTTP_200_OK)
 
 
-class ProfileView(APIView):
+class ProfileView(APIView, BaseView):
+    """
+    Предствление работы с профилем пользователя.
+
+    Methods:
+        get: Получение профиля пользователя.
+        post: Создание профиля пользователя.
+    """
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request):
-        profile = Profile.objects.get(user=request.user)
-        serializer = ProfileSerializer(profile)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        """
+        Получение профиля пользователя.
+
+        GET /api/profile
+
+        Attributes:
+            request: Метаданные запроса.
+        """
+        try:
+            profile = Profile.objects.get(user=request.user)
+            return self._build_response(
+                data=profile,
+                serializer=ProfileSerializer,
+                status=status.HTTP_200_OK,
+                logger=logger,
+            )
+        except Exception as e:
+            return self._handle_error(
+                message=str(e),
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                logger=logger,
+            )
 
     def post(self, request):
-        profile = Profile.objects.get(user=request.user)
-        serializer = ProfileSerializer(profile, data=request.data, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        """
+        Создание профиля пользователя.
+
+        POST /api/profile
+
+        Attributes:
+            request: Метаданные запроса.
+        """
+        try:
+            profile = Profile.objects.get(user=request.user)
+            serializer = ProfileSerializer(profile, data=request.data, partial=True)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            return self._handle_error(
+                    message=str(serializer.errors),
+                    status=status.HTTP_400_BAD_REQUEST,
+                    logger=logger,
+                )
+        except Exception as e:
+            return self._handle_error(
+                    message=str(e),
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    logger=logger,
+                )
 
 
-class ProfileUpdatePasswordView(APIView):
+class ProfileUpdatePasswordView(APIView, BaseView):
+    """
+    Обновление профиля пользователя.
+
+    Methods:
+        post: Обновление профиля пользователя.
+    """
     permission_classes = [permissions.IsAuthenticated]
 
     def post(self, request):
+        """
+        Обновление профиля пользователя.
+
+        POST /api/profile/password
+
+        Attributes:
+            request: Метаданные запроса.
+        """
         user = request.user
 
         old_password = request.data.get("currentPassword")
         new_password = request.data.get("newPassword")
 
         if not all([old_password, new_password]):
-            return Response(
-                {"error": "Все поля обязательны"},
-                status=status.HTTP_400_BAD_REQUEST
+            return self._handle_error(
+                message='All fields are required.',
+                status=status.HTTP_400_BAD_REQUEST,
+                logger=logger,
             )
 
         if not check_password(old_password, user.password):
-            return Response(
-                {"error": "Неверный текущий пароль"},
-                status=status.HTTP_400_BAD_REQUEST
+            return self._handle_error(
+                message='Incorrect current password.',
+                status=status.HTTP_400_BAD_REQUEST,
+                logger=logger,
             )
 
         user.set_password(new_password)
@@ -97,16 +246,28 @@ class ProfileUpdatePasswordView(APIView):
         update_session_auth_hash(request, user)
 
         return Response(
-            {"success": "Пароль успешно изменен"},
+            {"success": "Password changed successfully."},
             status=status.HTTP_200_OK
         )
 
 
-class ProfileUpdateAvatar(APIView):
+class ProfileUpdateAvatar(APIView, BaseView):
+    """
+    Обновление аватара профиля.
+
+    Methods:
+        post: Метод обновление аватара профиля.
+    """
     permission_classes = [permissions.IsAuthenticated]
     parser_classes = [MultiPartParser]
 
     def post(self, request):
+        """
+        Метод обновление аватара профиля.
+
+        Attributes:
+            request: Метаданные запроса.
+        """
         try:
             profile = request.user.profile
             avatar_file = request.FILES["avatar"]
@@ -122,7 +283,8 @@ class ProfileUpdateAvatar(APIView):
                 status=status.HTTP_200_OK
             )
         except Exception:
-            return Response(
-                {"error": "Произошла ошибка при загрузке аватара"},
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            return self._handle_error(
+                message='Internal server error.',
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                logger=logger,
             )

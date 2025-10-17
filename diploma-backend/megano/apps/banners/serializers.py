@@ -21,4 +21,4 @@ class BannerSerializer(serializers.ModelSerializer):
         ]
 
     def get_price(self, obj):
-        return obj.sales.first().sale.sale_price if obj.sales.first() else obj.price
+        return obj.get_price()

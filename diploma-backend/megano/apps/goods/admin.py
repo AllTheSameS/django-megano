@@ -25,12 +25,12 @@ class ProductAdmin(admin.ModelAdmin):
     Админка для модели Product.
     """
     list_display = (
-        'title', 
-        'category', 
-        'price', 
-        'count', 
-        'rating', 
-        'free_delivery', 
+        'title',
+        'category',
+        'price',
+        'count',
+        'rating',
+        'free_delivery',
         'limited_edition',
         'available',
         'date'
@@ -51,10 +51,10 @@ class ProductAdmin(admin.ModelAdmin):
     fieldsets = (
         ('Основная информация', {
             'fields': (
-                'title', 
-                'category', 
+                'title',
+                'category',
                 'tags',
-                'price', 
+                'price',
                 'count',
                 'shopping_counter',
                 'rating'
@@ -62,7 +62,7 @@ class ProductAdmin(admin.ModelAdmin):
         }),
         ('Описание', {
             'fields': (
-                'description', 
+                'description',
                 'full_description'
             )
         }),

@@ -2,7 +2,17 @@ from django.db.models import Q
 
 
 class ProductFilterService:
-    """Сервисный слой для фильтрации продуктов"""
+    """
+    Сервисный слой для фильтрации продуктов.
+
+    Methods:
+
+        build_filters(query_params)
+            Метод фильтрации продуктов.
+
+        get_sort_params(query_params)
+            Метод сортировки продуктов.
+    """
 
     @staticmethod
     def build_filters(query_params):
@@ -73,6 +83,9 @@ class ProductFilterService:
 
         if sort == 'reviews':
             sort_field = 'reviews_count'
+
+        elif sort == 'price':
+            sort_field = 'effective_price'
         else:
             sort_field = sort
 

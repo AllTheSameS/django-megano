@@ -98,8 +98,7 @@ class Order(models.Model):
     total_cost = models.DecimalField(
         max_digits=10,
         decimal_places=2,
-        null=True,
-        default=None,
+        default=0,
         verbose_name='Общая стоимость',
     )
 
@@ -124,6 +123,22 @@ class Order(models.Model):
         if not self.order_number:
             self.order_number = str(uuid.uuid4())[:8].upper()
         super().save(*args, **kwargs)
+
+    def calculation_total_cost(self):
+        """
+        Расчет общей стоимости заказа.
+        """
+        for item in self.items.all():
+            self.total_cost += item.product.get_price() * item.count
+
+    def delivery_calculation(self):
+        """
+        Расчет стоимости доставки.
+        """
+        if self.total_cost < 2000 and self.delivery_type != 'express':
+            self.total_cost += 200
+        elif self.delivery_type == 'express':
+            self.total_cost += 500
 
 
 class OrderItem(models.Model):
@@ -153,3 +168,9 @@ class OrderItem(models.Model):
 
     def __str__(self):
         return f'{self.count} x {self.product.title}'
+
+    def checking_count_goods(self):
+        """
+        Метод проверки количества продукта в магазине с количесвом покупаемого продукта.
+        """
+        return True if self.product.count >= self.count else False

@@ -43,6 +43,7 @@ THIRD_PARTY_APPS = [
     'rest_framework',
     'drf_spectacular',
     'mptt',
+    'corsheaders',
 ]
 
 LOCAL_APPS = [
@@ -61,6 +62,7 @@ LOCAL_APPS = [
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -184,16 +186,46 @@ SECURE_BROWSER_XSS_FILTER = True # Защита от XSS-атак
 SECURE_CONTENT_TYPE_NOSNIFF = True # Защита MIME-типов
 X_FRAME_OPTIONS = 'DENY' # Защита от кликджекинга
 
-LOGFILE_NAME = BASE_DIR / 'log.txt'
+LOGS_DIR = BASE_DIR / 'logs'
+LOGS_DIR.mkdir(exist_ok=True)
+
+LOGFILE_NAME = LOGS_DIR / 'log.txt'
+DEBUG_LOGFILE_NAME = LOGS_DIR / 'debug_logs.log'
+ERROR_LOGFILE_NAME = LOGS_DIR / 'error_logs.log'
 
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+    'formatters': {
+        'detailed': {
+            'format': '[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(name)s %(message)s',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
+        },
+    },
     'handlers': {
         'file': {
             'level': 'INFO',
-            'class': 'logging.FileHandler',
+            'class': 'logging.handlers.RotatingFileHandler',
             'filename': LOGFILE_NAME,
+            'maxBytes': 1024*1024*5,
+            'backupCount': 5,
+            'formatter': 'detailed',
+        },
+        'debug_log_file': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': DEBUG_LOGFILE_NAME,
+            'maxBytes': 1024*1024*5,
+            'backupCount': 5,
+            'formatter': 'detailed',
+        },
+        'error_file': {
+            'level': 'ERROR',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': ERROR_LOGFILE_NAME,
+            'maxBytes': 1024*1024*5,
+            'backupCount': 5,
+            'formatter': 'detailed',
         },
     },
     'loggers': {
@@ -202,6 +234,11 @@ LOGGING = {
             'level': 'INFO',
             'propagate': True,
         },
+        'goods': {
+            'handlers': ['debug_log_file', 'error_file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        }
     },
 }
 MEDIA_URL = 'media/'

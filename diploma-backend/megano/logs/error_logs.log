@@ -1,0 +1,12 @@
+[2025-09-26 14:50:31] ERROR [goods:151] goods name 'produc' is not defined
+[2025-10-02 23:38:42] ERROR [goods:25] goods 'ProductView' object has no attribute '_get_filtered_products'
+[2025-10-02 23:38:42] ERROR [goods:25] goods 'ProductView' object has no attribute '_get_filtered_products'
+[2025-10-02 23:39:25] ERROR [goods:25] goods 'ProductView' object has no attribute '_get_filtered_products'
+[2025-10-02 23:41:21] ERROR [goods:25] goods 'QuerySet' object has no attribute 'GET'
+[2025-10-02 23:41:22] ERROR [goods:25] goods 'QuerySet' object has no attribute 'GET'
+[2025-10-02 23:42:49] ERROR [goods:25] goods 'QuerySet' object has no attribute 'GET'
+[2025-10-02 23:42:57] ERROR [goods:25] goods 'QuerySet' object has no attribute 'GET'
+[2025-10-02 23:43:31] ERROR [goods:25] goods 'QuerySet' object has no attribute 'GET'
+[2025-10-02 23:43:48] ERROR [goods:25] goods 'list' object has no attribute 'GET'
+[2025-10-02 23:44:28] ERROR [goods:25] goods 'QuerySet' object has no attribute 'GET'
+[2025-10-03 01:19:28] ERROR [goods:25] goods Product matching query does not exist.

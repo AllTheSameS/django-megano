@@ -45,18 +45,6 @@ class Basket(models.Model):
             return f"Корзина пользователя {self.user.username}"
         return f"Анонимная корзина ({self.session_key})"
 
-    def get_total_count(self):
-        """Общее количество товаров в корзине"""
-        return sum(item.count for item in self.items.all())
-
-    def get_total_price(self):
-        """Общая стоимость корзины"""
-        return sum(item.get_total_price() for item in self.items.all())
-
-    def clear(self):
-        """Очистить корзину"""
-        self.items.all().delete()
-
     @classmethod
     def get_or_create_basket(cls, request):
         """
@@ -117,9 +105,9 @@ class BasketItem(models.Model):
         if self.count > self.product.count:
             raise ValidationError(f'Недостаточно товара на складе. Доступно: {self.product.count}')
 
-    def get_total_price(self):
+    def get_product_price(self):
         """Общая стоимость товара в корзине"""
-        return self.product.price * self.count
+        return self.product.get_price()
 
     def save(self, *args, **kwargs):
         self.clean()
